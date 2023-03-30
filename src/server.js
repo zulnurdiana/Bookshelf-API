@@ -4,8 +4,8 @@ const Routes = require('./routes.js');
 // Inisiasi server hapi
 const init = async () => {
   const server = Hapi.server({
-    port: 9000,
-    host: 'localhost',
+    port: 3000,
+    host: '0.0.0.0', // karena belajar docker ubah dulu ke 0.0.0.0 semula nya localhost
   });
 
   // Route

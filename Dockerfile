@@ -7,9 +7,11 @@ COPY package.json package.json
 RUN npm install
 
 
-COPY /src/server.js /src/server.js 
-COPY /src/books.js /src/books.js
-COPY /src/handler.js /src/handler.js 
-COPY /src/routes.js /src/routes.js
+COPY /src/server.js server.js 
+COPY /src/books.js books.js
+COPY /src/handler.js handler.js 
+COPY /src/routes.js routes.js
+ENV PORT=3000
+EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["node","server.js"]
